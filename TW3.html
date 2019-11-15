@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+
+<html>
+   <body>
+        <p> This page was viewed <span id="count"></span> time(s).
+        </p>
+        <p>
+            Capital of India :
+            <span id="cIn"></span>
+            
+        </p>
+        <script type = "text/javascript">
+         
+              var cIndia = "";
+            
+             //Replace "pageLoadCount" by "hits" and try
+
+             if (!localStorage.pageLoadCount){
+                 localStorage.pageLoadCount = 0;
+             }
+             
+
+            localStorage.pageLoadCount = parseInt(localStorage.pageLoadCount,10) + 1;
+             document.getElementById('count').textContent = localStorage.pageLoadCount;
+            
+             localStorage.setItem("In","Delhi");
+             cIndia = localStorage.getItem("In");
+
+             
+             document.getElementById('cIn').textContent = cIndia;
+
+             
+
+             //localStorage.clear();
+         
+        </script>
+		
+    </body>
+</html>
